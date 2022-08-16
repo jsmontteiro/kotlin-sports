@@ -2,12 +2,13 @@ ext {
 
     versions = [
             kotlin                : kotlin_version,
+            lifecycle             : '2.2.0',
             constraintLayout      : "2.1.4",
             material              : '1.6.1',
 
             retrofit              : '2.9.0',
             gson                  : '2.9.1',
-            httpLoggingInterceptor: '4.3.1',
+            httpLoggingInterceptor: '4.9.0',
 
             koin                  : '3.2.0',
 
@@ -19,6 +20,7 @@ ext {
     ]
     dependencies = [
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+            viewModelKtx         : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
             koin                 : "io.insert-koin:koin-android:${versions.koin}",
             constraintLayout     : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
             appCompat            : "androidx.appcompat:appcompat:${versions.appCompat}",
@@ -26,6 +28,7 @@ ext {
             retrofit             : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
             gson                 : "com.google.code.gson:gson:${versions.gson}",
             retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+            httpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${versions.httpLoggingInterceptor}",
     ]
 
 

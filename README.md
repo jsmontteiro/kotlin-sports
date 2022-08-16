@@ -11,7 +11,6 @@
 - Retrofit
 - Kotlin Coroutines
 - Gson
-- Glide
 - Architecture Components(Lifecycle, LiveData, ViewModel)
 - Koin
 

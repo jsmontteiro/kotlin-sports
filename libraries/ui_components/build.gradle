@@ -11,5 +11,5 @@ dependencies {
     implementation deps.appCompat
     api deps.constraintLayout
     api deps.material
-
+    api deps.viewModelKtx
 }
