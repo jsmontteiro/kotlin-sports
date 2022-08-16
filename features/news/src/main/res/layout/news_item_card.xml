@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/cardview_dark_background"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:strokeWidth="2dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -15,7 +20,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/news_tv_published_date"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/ic_nba" />
@@ -24,9 +31,11 @@
             android:id="@+id/news_tv_tournament"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/news_tv_statistics"
+            app:layout_constraintStart_toEndOf="@+id/news_logo"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Name of tournament" />
 
@@ -35,12 +44,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/news_tv_tournament"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_tournament"
             app:layout_constraintTop_toBottomOf="@+id/news_tv_tournament"
             tools:text="Name of winner" />
 
+
+        <TextView
+            android:id="@+id/news_tv_published_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Published" />
+
+        <TextView
+            android:id="@+id/news_tv_statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Published" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
