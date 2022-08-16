@@ -1,15 +1,16 @@
 package kotlinsports.features.news.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import kotlinsports.features.news.R
+import kotlinsports.features.news.databinding.NewsActivityMainBinding
 import kotlinsports.ui_components.externsions.createLoadingDialog
 import kotlinsports.ui_components.externsions.showMessage
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: NewsActivityMainBinding
+    private val newsAdapter = NewsAdapter()
     private val viewModel: MainViewModel by viewModel()
 
     private val loadingDialog by lazy {
@@ -18,22 +19,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = NewsActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        //setupView()
+        setupView()
         setupObservers()
 
         viewModel.init()
     }
 
     private fun setupView() {
-        //rvCards.adapter = cardsAdapter
+        binding.mainRvNews.adapter = newsAdapter
     }
 
     private fun setupObservers() {
-        viewModel.news.observe(this) {
-            //newsAdapter.submitList(it)
-            Log.d("API", it.toString())
+        viewModel.newsFormated.observe(this) {
+            newsAdapter.submitList(it)
         }
 
         viewModel.showError.observe(this) {

@@ -6,10 +6,6 @@ android {
         applicationId "br.com.montteiro.kotlinsports"
     }
 
-    buildFeatures {
-        viewBinding true
-    }
-
     resourcePrefix ""
 }
 
