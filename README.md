@@ -1,22 +1,12 @@
-# (In progress)
+# Kotlin Sports
 
-## Kotlin Sports
-
-
-#### Architecture
+## Architecture
 - Multi-modules
 - Clean architecture
 
-#### Lib's
+## Lib's
 - Retrofit
 - Kotlin Coroutines
 - Gson
-- Architecture Components(Lifecycle, LiveData, ViewModel)
+- Architecture Components(Lifecycle, ViewModel)
 - Koin
-
-#### Test Lib's
-- jUnit
-- Mockk
-- MockWebServer
-- CoroutinesTest
-- Android core testing
