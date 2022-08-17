@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/cardview_dark_background"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:strokeWidth="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/news_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/news_tv_published_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/ic_nba" />
+
+        <TextView
+            android:id="@+id/news_tv_title_tournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/news_tv_title_tournament"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/news_tv_published_date"
+            app:layout_constraintTop_toTopOf="@+id/news_logo" />
+
+        <TextView
+            android:id="@+id/news_tv_title_game_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/news_tv_title_game_number"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/news_tv_tournament"
+            app:layout_constraintTop_toTopOf="@+id/news_tv_title_tournament" />
+
+        <TextView
+            android:id="@+id/news_tv_title_winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/news_tv_title_winner"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_tournament"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_tournament" />
+
+
+        <TextView
+            android:id="@+id/news_tv_title_looser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/news_tv_title_looser"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/news_tv_title_mvp"
+            app:layout_constraintStart_toEndOf="@+id/news_tv_winner"
+            app:layout_constraintTop_toTopOf="@+id/news_tv_title_winner" />
+
+        <TextView
+            android:id="@+id/news_tv_title_mvp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news_tv_title_mvp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_mvp"
+            app:layout_constraintTop_toTopOf="@+id/news_tv_title_looser" />
+
+        <TextView
+            android:id="@+id/news_tv_title_publication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/news_tv_title_publication"
+            android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/news_logo" />
+
+        <TextView
+            android:id="@+id/news_tv_tournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_tournament"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_tournament" />
+
+
+        <TextView
+            android:id="@+id/news_tv_winner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_winner"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_winner" />
+
+        <TextView
+            android:id="@+id/news_tv_published_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_publication"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_publication" />
+
+        <TextView
+            android:id="@+id/news_tv_game_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_game_number"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_game_number" />
+
+        <TextView
+            android:id="@+id/news_tv_looser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_looser"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_looser" />
+
+        <TextView
+            android:id="@+id/news_tv_mvp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/news_tv_title_game_number"
+            app:layout_constraintTop_toBottomOf="@+id/news_tv_title_mvp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

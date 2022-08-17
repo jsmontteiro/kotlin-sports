@@ -7,6 +7,6 @@ import kotlinsports.features.news.model.News
 
 internal class OrderNewsUseCase() : UseCase<List<FormatedNews>, List<FormatedNews>> {
     override suspend fun execute(param: List<FormatedNews>): List<FormatedNews> {
-        return param
+        return param.sortedBy { it.publicationDate }
     }
 }

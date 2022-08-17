@@ -1,9 +1,13 @@
 package kotlinsports.features.news.model
 
 class FormatedNews(
-    var tournament: String,
-    var winner: String,
-    var sportType: SportType,
-    var publicationDate: String,
-    var statistics: Double
+    val tournament: String,
+    val winner: String,
+    val sportType: SportType,
+    val publicationDate: String,
+    val seconds: Double? = null,
+    val gameNumber: Int? = null,
+    val looser: String? = null,
+    val mvp: String? = null,
+    val numberOfSets: Int? = null
 )

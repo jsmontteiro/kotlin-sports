@@ -16,11 +16,25 @@ internal class FormatNewsUseCase() : UseCase<News, List<FormatedNews>> {
         }
 
         param.nbaNews.forEach {
-            formatedList.add(FormatedNews(it.tournament, it.winner, SportType.NBA, it.publicationDate, it.gameNumber.toDouble()))
+            formatedList.add(FormatedNews(
+                tournament = it.tournament,
+                winner = it.winner,
+                sportType = SportType.NBA,
+                publicationDate = it.publicationDate,
+                gameNumber = it.gameNumber,
+                mvp = it.mvp,
+                looser = it.looser))
         }
 
         param.tennisNews.forEach {
-            formatedList.add(FormatedNews(it.tournament, it.winner, SportType.TENNIS, it.publicationDate, it.numberOfSets.toDouble()))
+            formatedList.add(FormatedNews(
+                tournament = it.tournament,
+                winner = it.winner,
+                sportType = SportType.TENNIS,
+                publicationDate = it.publicationDate,
+                looser = it.looser,
+                numberOfSets = it.numberOfSets
+            ))
         }
 
         return formatedList

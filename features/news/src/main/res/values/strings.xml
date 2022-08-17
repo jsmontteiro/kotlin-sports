@@ -1,1 +1,10 @@
-<resources></resources>
+<resources>
+    <string name="news_tv_title_publication">Publication Date</string>
+    <string name="news_tv_title_tournament">Tournament</string>
+    <string name="news_tv_title_winner">Winner</string>
+    <string name="news_tv_title_seconds">Seconds</string>
+    <string name="news_tv_title_game_number">Game Number</string>
+    <string name="news_tv_title_looser">Looser</string>
+    <string name="news_tv_title_mvp">MVP</string>
+    <string name="news_tv_title_number_of_sets">Number of sets</string>
+</resources>
